@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harry Guajan | Portfolio</title>
-  <meta name="description" content="Portfolio of Harry Guajan, Computer Engineering student at EPN specializing in backend development and software design.">
-  <meta name="keywords" content="Harry Guajan, software developer, computer engineering, Java, Python, EPN, portfolio">
-
+  <title>Harry Guajan | Computer Engineering Student & Developer</title>
+  <meta name="description" content="Portfolio of Harry Guajan - Computer Engineering student at EPN specializing in Java, Python, and software development with a human-centered approach">
+  <meta name="keywords" content="Harry Guajan, software developer, computer engineering, Java, Python, EPN, Ecuador, backend development">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     :root {
       --bg-color: #121212;
       --text-color: #e0e0e0;
       --accent-color: #00adb5;
+      --secondary-color: #bb86fc;
       --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      --card-bg: #1e1e1e;
     }
 
     html {
@@ -29,16 +30,48 @@
     }
 
     header {
-      padding: 2rem 1rem;
+      padding: 3rem 1rem;
       text-align: center;
-      background-color: #1f1f1f;
-      border-bottom: 1px solid #333;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 75% 30%, rgba(0, 173, 181, 0.15) 0%, transparent 50%);
+      z-index: 0;
+    }
+
+    header > * {
+      position: relative;
+      z-index: 1;
     }
 
     header h1 {
       margin: 0;
       color: var(--accent-color);
-      font-size: 2.5rem;
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin: 0.5rem 0 1.5rem;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .tagline {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      padding: 0 1rem;
     }
 
     nav {
@@ -46,48 +79,139 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 1.5rem;
-      padding: 1rem;
-      background-color: #1a1a1a;
+      padding: 1.2rem;
+      background-color: rgba(26, 26, 26, 0.95);
+      backdrop-filter: blur(5px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
 
     nav a {
       color: var(--text-color);
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      padding: 0.3rem 0;
+      position: relative;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
       color: var(--accent-color);
     }
 
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent-color);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
     section {
       max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
     }
 
     section h2 {
       color: var(--accent-color);
-      border-bottom: 1px solid #333;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: var(--secondary-color);
+      border-radius: 3px;
     }
 
     .project, .experience {
-      margin-bottom: 1.5rem;
+      background-color: var(--card-bg);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+
+    .project:hover, .experience:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      border-left-color: var(--accent-color);
+    }
+
+    .project h3, .experience h3 {
+      color: var(--secondary-color);
+      margin-top: 0;
+      font-size: 1.4rem;
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 0.5rem 0 1rem;
+      font-size: 0.9rem;
+    }
+
+    .project-meta span {
+      background-color: rgba(0, 173, 181, 0.2);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      color: var(--accent-color);
+    }
+
+    .project-links {
+      margin-top: 1rem;
+    }
+
+    .project-links a {
+      display: inline-block;
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: rgba(0, 173, 181, 0.1);
+      border: 1px solid var(--accent-color);
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .project-links a:hover {
+      background-color: var(--accent-color);
+      color: #121212;
+      text-decoration: none;
     }
 
     .quote {
       font-style: italic;
       color: #aaa;
-      border-left: 3px solid var(--accent-color);
-      padding-left: 1rem;
-      margin: 1rem 0;
+      border-left: 3px solid var(--secondary-color);
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      background-color: rgba(30, 30, 30, 0.7);
+      border-radius: 0 8px 8px 0;
     }
 
     footer {
       text-align: center;
-      padding: 2rem;
+      padding: 3rem 1rem;
+      background-color: #1a1a1a;
       font-size: 0.9rem;
       color: #888;
     }
@@ -95,20 +219,39 @@
     a {
       color: var(--accent-color);
       text-decoration: none;
+      transition: color 0.3s ease;
     }
 
     a:hover {
+      color: var(--secondary-color);
       text-decoration: underline;
     }
 
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
     .social-icons a {
-      margin: 0 10px;
-      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
       color: var(--text-color);
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
     }
 
     .social-icons a:hover {
-      color: var(--accent-color);
+      background-color: var(--accent-color);
+      color: #121212;
+      transform: translateY(-3px);
+      text-decoration: none;
     }
 
     #topBtn {
@@ -118,31 +261,148 @@
       background-color: var(--accent-color);
       color: #121212;
       border: none;
-      padding: 10px 15px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
       cursor: pointer;
-      border-radius: 5px;
       display: none;
+      font-size: 1.2rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      z-index: 99;
     }
 
-    @media (max-width: 600px) {
+    #topBtn:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-3px);
+    }
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-category {
+      background-color: var(--card-bg);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-category h3 {
+      color: var(--secondary-color);
+      margin-top: 0;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
+    }
+
+    .skill-category ul {
+      padding-left: 1.2rem;
+    }
+
+    .skill-category li {
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+
+    .skill-category li::before {
+      content: "▹";
+      position: absolute;
+      left: -1.2rem;
+      color: var(--accent-color);
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .about-text {
+      order: 1;
+    }
+
+    .about-image {
+      order: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-image img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+      .about-text {
+        order: 2;
+      }
+      .about-image {
+        order: 1;
+      }
       header h1 {
+        font-size: 2.2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      section h2 {
         font-size: 1.8rem;
       }
+    }
+
+    @media (max-width: 480px) {
       nav {
+        gap: 1rem;
+        padding: 0.8rem;
+      }
+      nav a {
+        font-size: 0.9rem;
+      }
+      .project-meta {
         flex-direction: column;
+        gap: 0.5rem;
+      }
+      .project-links a {
+        display: block;
+        margin-bottom: 0.5rem;
+        text-align: center;
       }
     }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section {
+      animation: fadeIn 0.6s ease forwards;
+    }
+
+    section:nth-child(2) { animation-delay: 0.1s; }
+    section:nth-child(3) { animation-delay: 0.2s; }
+    section:nth-child(4) { animation-delay: 0.3s; }
+    section:nth-child(5) { animation-delay: 0.4s; }
+    section:nth-child(6) { animation-delay: 0.5s; }
   </style>
 </head>
 <body>
 
   <header>
     <h1>Harry Guajan</h1>
-    <p>Computer Engineering Student · EPN Ecuador</p>
+    <p>Computer Engineering Student | EPN Ecuador</p>
+    <p class="tagline">Building solutions that combine technical excellence with human-centered design</p>
     <div class="social-icons">
-      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="mailto:harry.gns@outlook.com"><i class="fas fa-envelope"></i></a>
-      <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/harryguajan" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="mailto:harry.gns@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/harryguajan" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
     </div>
   </header>
 
@@ -151,95 +411,281 @@
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
-    <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>My name is <strong>Harry Nicolás Guajan Simbana</strong>, a Computer Engineering student at the National Polytechnic School of Ecuador (EPN). I’m currently in my fourth semester, focused on software and application development using Java and Python.</p>
-    <p>I was born and raised in Quito, Ecuador, and since childhood, I've been passionate about technology and creativity. I enjoy building solutions that blend logic with accessibility and human-centered design.</p>
-    <p>In my free time, I sketch, play soccer as a goalkeeper, and read poetry and magical realism—especially Neruda and García Márquez.</p>
-    <div class="quote">
-      “To see the world, things dangerous to come to, to see behind walls, draw closer, to find each other and to feel. That is the purpose of life.”
+    <div class="about-content">
+<div class="about-text">
+  <p><strong>Harry Guajan</strong></p>
+  <p>My name is Harry Nicolás Guajan Simbana, and I'm currently pursuing a degree in Computer Engineering at the National Polytechnic School of Ecuador (EPN). This program has provided me with strong foundations in programming, database systems, and development tools, while motivating me to explore emerging fields in computing. I remain committed to continuous learning, striving to enhance both my technical skills and problem-solving capabilities.</p>
+  
+  <p>I was born and raised in Quito, Ecuador, a city that has offered me exceptional opportunities for personal and academic growth. Since childhood, I've had a keen interest in technology and creative disciplines, which I now channel into projects that combine logical structure, thoughtful design, and practical functionality. I believe in balancing technical excellence with human-centered approaches to develop accessible solutions.</p>
+  
+  <p>Currently in my fourth semester, I focus on software and application development, working extensively with Java and Python. I'm passionate about creating tools that can meaningfully improve people's lives, and I thrive on the challenge of transforming ideas into purposeful, functional projects.</p>
+  
+  <ul>
+    <li><strong>Software Development:</strong> backend development, application design, productivity tools</li>
+    <li><strong>Programming Languages:</strong> Java, Python</li>
+    <li><strong>Creative Technologies:</strong> digital illustration, storytelling, comic creation</li>
+    <li><strong>Multimedia Tools:</strong> graphic design, media editing</li>
+  </ul>
+
+  <p>I'm an organized person committed to my professional growth. Although I'm still in training, I work every day to improve both my technical and personal skills. I've discovered that programming is more than writing code—it's a tool for creating solutions that can positively impact people's lives, and that's what inspires me to keep learning.</p>
+  
+  <p>In my free time, I enjoy reading poetry and magical realism (especially Neruda and García Márquez), playing soccer as a goalkeeper, and sketching for relaxation.</p>
+  
+  <div class="quote">
+    "To see the world, things dangerous to come to, to see behind walls, draw closer, to find each other and to feel. That is the purpose of life."
+  </div>
+  <p>I'm always open to connecting with others who are passionate about technology and continuous learning.<br>
+  You can find me at <a href="mailto:harry.gns@outlook.com">harry.gns@outlook.com</a>.</p>
+</div>
+      </div>
+      <div class="about-image">
+        <!-- Placeholder for profile image - replace with actual image -->
+        <img src="https://via.placeholder.com/400x500/1e1e1e/00adb5?text=Harry+Guajan" alt="Harry Guajan" />
+      </div>
     </div>
   </section>
 
   <section id="projects">
-    <h2>Projects</h2>
+    <h2>Featured Projects</h2>
+    
     <div class="project">
       <h3>POLITUTI Store Management System</h3>
-      <p><strong>Status:</strong> Completed (Oct 2024)</p>
-      <p>Developed a Java Swing + MySQL system for product, customer, and invoice management. Included data validation, PDF invoice automation, and optimized UI.</p>
-      <p><a href="#">[PDF]</a> | <a href="#">[CODE]</a></p>
+      <div class="project-meta">
+        <span>Java</span>
+        <span>MySQL</span>
+        <span>Swing</span>
+        <span>Completed: Oct 2024</span>
+      </div>
+      <p>A comprehensive retail management solution developed for my Computer Engineering program at EPN. The system features:</p>
+      <ul>
+        <li>Complete CRUD operations for products, customers, and invoices</li>
+        <li>PDF invoice generation with automated numbering</li>
+        <li>Data validation and integrity constraints</li>
+        <li>Optimized UI/UX with search filters and intuitive navigation</li>
+      </ul>
+      <p><strong>Collaborators:</strong> Michael Yanez, Lenin Vasquez</p>
+      <div class="project-links">
+        <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> Project PDF</a>
+        <a href="#" target="_blank"><i class="fab fa-github"></i> View Code</a>
+      </div>
     </div>
+    
     <div class="project">
-      <h3>Digital Inclusion - Literacy - EPN Ecuador</h3>
-      <p><strong>Status:</strong> Completed (4 months, 2024)</p>
-      <p>Contributed 44 hours as a tutor in a digital literacy program, creating adapted teaching material for non-technical users and covering hardware, Office tools, AI, and more.</p>
-      <p><a href="#">[PDF]</a></p>
+      <h3>Digital Literacy Tutor - EPN Ecuador</h3>
+      <div class="project-meta">
+        <span>Teaching</span>
+        <span>Digital Inclusion</span>
+        <span>44 Hours</span>
+        <span>Completed: 2024</span>
+      </div>
+      <p>As part of EPN's social program, I provided personalized digital training covering:</p>
+      <ul>
+        <li>Computer hardware/software fundamentals</li>
+        <li>Office suite and productivity tools</li>
+        <li>Online banking and government services</li>
+        <li>Introduction to AI tools</li>
+      </ul>
+      <p>Developed adapted learning materials and methodologies to help non-technical users become confident with technology.</p>
+      <div class="project-links">
+        <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> Program Details</a>
+      </div>
     </div>
+    
     <div class="project">
-      <h3>Pomopet Concept</h3>
-      <p><strong>Status:</strong> Conceptualization Phase (2025)</p>
-      <p>Gamified productivity app concept focused on habit-building and behavioral psychology. Abstract coming soon.</p>
+      <h3>Pomopet - Gamified Productivity App</h3>
+      <div class="project-meta">
+        <span>Concept</span>
+        <span>Productivity</span>
+        <span>Gamification</span>
+        <span>In Development</span>
+      </div>
+      <p>A creative approach to productivity combining:</p>
+      <ul>
+        <li>Pomodoro technique with gamification elements</li>
+        <li>Habit formation principles from behavioral psychology</li>
+        <li>Customizable virtual pet that reflects productivity habits</li>
+        <li>Progress tracking and achievement system</li>
+      </ul>
+      <p>Currently in conceptualization phase with prototype development planned for 2025.</p>
     </div>
   </section>
 
   <section id="skills">
-    <h2>Skills & Technical Toolkit</h2>
-    <ul>
-      <li><strong>Languages:</strong> Java (OOP), Python (Scripting)</li>
-      <li><strong>Databases & Tools:</strong> MySQL, Git, VS Code</li>
-      <li><strong>Frameworks Exploring:</strong> Flask, Django</li>
-      <li><strong>Design:</strong> Photoshop (basic), storytelling, comic creation</li>
-      <li><strong>Teaching:</strong> Personalized tech training & digital literacy</li>
-    </ul>
-  </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="experience">
-      <p>Actively seeking my first professional opportunity in software development. I am eager to contribute meaningfully to technical teams while continuing to grow and learn.</p>
+    <h2>Technical Skills</h2>
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3>Programming</h3>
+        <ul>
+          <li><strong>Java</strong> - Object-oriented programming, Swing GUI</li>
+          <li><strong>Python</strong> - Scripting, prototyping, automation</li>
+          <li>Basic web development (HTML/CSS/JavaScript)</li>
+        </ul>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Tools & Technologies</h3>
+        <ul>
+          <li><strong>Databases</strong> - MySQL, relational design</li>
+          <li><strong>Version Control</strong> - Git, GitHub</li>
+          <li><strong>IDEs</strong> - VS Code, IntelliJ, Eclipse</li>
+        </ul>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Currently Learning</h3>
+        <ul>
+          <li>Backend development with Flask/Django</li>
+          <li>Software architecture patterns</li>
+          <li>Gamification principles in tech</li>
+        </ul>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Creative Skills</h3>
+        <ul>
+          <li>Digital illustration & storytelling</li>
+          <li>Graphic design basics (Photoshop)</li>
+          <li>Technical writing & documentation</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li>English Proficiency B1 (Expected 2025)</li>
-    </ul>
+  <section id="experience">
+    <h2>Experience & Education</h2>
+    
+    <div class="experience">
+      <h3>Computer Engineering Student</h3>
+      <div class="project-meta">
+        <span>National Polytechnic School (EPN)</span>
+        <span>2023 - Present</span>
+        <span>Quito, Ecuador</span>
+      </div>
+      <p>Currently in my fourth semester with coursework in:</p>
+      <ul>
+        <li>Data structures and algorithms</li>
+        <li>Database systems</li>
+        <li>Object-oriented programming</li>
+        <li>Computer architecture</li>
+      </ul>
+    </div>
+    
+    <div class="experience">
+      <h3>Digital Literacy Tutor</h3>
+      <div class="project-meta">
+        <span>EPN Social Program</span>
+        <span>2024</span>
+        <span>44 Hours</span>
+      </div>
+      <p>Key accomplishments:</p>
+      <ul>
+        <li>Developed customized teaching materials for adult learners</li>
+        <li>Helped students progress from basic computer skills to autonomous digital transactions</li>
+        <li>Adapted complex technical concepts for non-technical audiences</li>
+      </ul>
+    </div>
+    
+    <div class="experience">
+      <h3>Future Goals</h3>
+      <p>I'm actively seeking my first professional opportunity where I can:</p>
+      <ul>
+        <li>Apply my academic knowledge to real-world problems</li>
+        <li>Contribute to meaningful projects</li>
+        <li>Learn from experienced developers</li>
+        <li>Grow both technically and professionally</li>
+      </ul>
+    </div>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Let's connect! Feel free to reach out:</p>
-    <ul>
-      <li>Email: <a href="mailto:harry.gns@outlook.com">harry.gns@outlook.com</a></li>
-      <li>GitHub: <a href="https://github.com/" target="_blank">github.com/yourprofile</a></li>
-      <li>LinkedIn: <a href="https://linkedin.com/" target="_blank">linkedin.com/in/yourprofile</a></li>
-    </ul>
+    <h2>Get In Touch</h2>
+    <p>I'm always open to discussing new opportunities, collaborations, or just chatting about technology and ideas.</p>
+    
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3>Contact Information</h3>
+        <ul>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:harry.gns@outlook.com">harry.gns@outlook.com</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> Quito, Ecuador</li>
+        </ul>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Online Profiles</h3>
+        <ul>
+          <li><i class="fab fa-github"></i> <a href="https://github.com/harryguajan" target="_blank">github.com/harryguajan</a></li>
+          <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/harryguajan" target="_blank">linkedin.com/in/harryguajan</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <p>Feel free to reach out - I typically respond within 24 hours!</p>
   </section>
 
-  <button onclick="topFunction()" id="topBtn" title="Back to top">↑</button>
+  <button onclick="topFunction()" id="topBtn" title="Back to top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <footer>
-    © 2025 Harry Guajan · Built with 💻 & ☕
+    <p>© 2025 Harry Guajan | Computer Engineering Student</p>
+    <p>Built with <i class="fas fa-heart" style="color: #e74c3c;"></i> and <i class="fas fa-coffee" style="color: #8B4513;"></i> in Quito, Ecuador</p>
   </footer>
 
   <script>
+    // Back to top button
     const topBtn = document.getElementById("topBtn");
-    window.onscroll = function () {
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        topBtn.style.display = "block";
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topBtn.style.display = "flex";
+        topBtn.style.justifyContent = "center";
+        topBtn.style.alignItems = "center";
       } else {
         topBtn.style.display = "none";
       }
     };
+    
     function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     }
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Animation on scroll
+    const observerOptions = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+      section.style.opacity = 0;
+      section.style.transform = 'translateY(20px)';
+      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(section);
+    });
   </script>
 </body>
 </html>
