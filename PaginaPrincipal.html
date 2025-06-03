@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harry Guajan | Portfolio</title>
+  <meta name="description" content="Portfolio of Harry Guajan, Computer Engineering student at EPN specializing in backend development and software design.">
+  <meta name="keywords" content="Harry Guajan, software developer, computer engineering, Java, Python, EPN, portfolio">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --accent-color: #00adb5;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: var(--font-family);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 2rem 1rem;
+      text-align: center;
+      background-color: #1f1f1f;
+      border-bottom: 1px solid #333;
+    }
+
+    header h1 {
+      margin: 0;
+      color: var(--accent-color);
+      font-size: 2.5rem;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+      background-color: #1a1a1a;
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section h2 {
+      color: var(--accent-color);
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .project, .experience {
+      margin-bottom: 1.5rem;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #aaa;
+      border-left: 3px solid var(--accent-color);
+      padding-left: 1rem;
+      margin: 1rem 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 1.5rem;
+      color: var(--text-color);
+    }
+
+    .social-icons a:hover {
+      color: var(--accent-color);
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--accent-color);
+      color: #121212;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Harry Guajan</h1>
+    <p>Computer Engineering Student · EPN Ecuador</p>
+    <div class="social-icons">
+      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:harry.gns@outlook.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>My name is <strong>Harry Nicolás Guajan Simbana</strong>, a Computer Engineering student at the National Polytechnic School of Ecuador (EPN). I’m currently in my fourth semester, focused on software and application development using Java and Python.</p>
+    <p>I was born and raised in Quito, Ecuador, and since childhood, I've been passionate about technology and creativity. I enjoy building solutions that blend logic with accessibility and human-centered design.</p>
+    <p>In my free time, I sketch, play soccer as a goalkeeper, and read poetry and magical realism—especially Neruda and García Márquez.</p>
+    <div class="quote">
+      “To see the world, things dangerous to come to, to see behind walls, draw closer, to find each other and to feel. That is the purpose of life.”
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>POLITUTI Store Management System</h3>
+      <p><strong>Status:</strong> Completed (Oct 2024)</p>
+      <p>Developed a Java Swing + MySQL system for product, customer, and invoice management. Included data validation, PDF invoice automation, and optimized UI.</p>
+      <p><a href="#">[PDF]</a> | <a href="#">[CODE]</a></p>
+    </div>
+    <div class="project">
+      <h3>Digital Inclusion - Literacy - EPN Ecuador</h3>
+      <p><strong>Status:</strong> Completed (4 months, 2024)</p>
+      <p>Contributed 44 hours as a tutor in a digital literacy program, creating adapted teaching material for non-technical users and covering hardware, Office tools, AI, and more.</p>
+      <p><a href="#">[PDF]</a></p>
+    </div>
+    <div class="project">
+      <h3>Pomopet Concept</h3>
+      <p><strong>Status:</strong> Conceptualization Phase (2025)</p>
+      <p>Gamified productivity app concept focused on habit-building and behavioral psychology. Abstract coming soon.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills & Technical Toolkit</h2>
+    <ul>
+      <li><strong>Languages:</strong> Java (OOP), Python (Scripting)</li>
+      <li><strong>Databases & Tools:</strong> MySQL, Git, VS Code</li>
+      <li><strong>Frameworks Exploring:</strong> Flask, Django</li>
+      <li><strong>Design:</strong> Photoshop (basic), storytelling, comic creation</li>
+      <li><strong>Teaching:</strong> Personalized tech training & digital literacy</li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience">
+      <p>Actively seeking my first professional opportunity in software development. I am eager to contribute meaningfully to technical teams while continuing to grow and learn.</p>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>English Proficiency B1 (Expected 2025)</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Let's connect! Feel free to reach out:</p>
+    <ul>
+      <li>Email: <a href="mailto:harry.gns@outlook.com">harry.gns@outlook.com</a></li>
+      <li>GitHub: <a href="https://github.com/" target="_blank">github.com/yourprofile</a></li>
+      <li>LinkedIn: <a href="https://linkedin.com/" target="_blank">linkedin.com/in/yourprofile</a></li>
+    </ul>
+  </section>
+
+  <button onclick="topFunction()" id="topBtn" title="Back to top">↑</button>
+
+  <footer>
+    © 2025 Harry Guajan · Built with 💻 & ☕
+  </footer>
+
+  <script>
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = function () {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+    };
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+</body>
+</html>
