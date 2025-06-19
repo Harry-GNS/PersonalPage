@@ -9,12 +9,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     :root {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --accent-color: #00adb5;
-      --secondary-color: #bb86fc;
+      --bg-color: #f7f7f9;
+      --text-color: #232323;
+      --accent-color: #2563eb;      /* Azul profesional */
+      --secondary-color: #64748b;   /* Gris azulado */
       --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      --card-bg: #1e1e1e;
+      --card-bg: #fff;
     }
 
     html {
@@ -32,7 +32,7 @@
     header {
       padding: 3rem 1rem;
       text-align: center;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      background: linear-gradient(135deg, #e9ecef 0%, #f7f7f9 100%);
       position: relative;
       overflow: hidden;
     }
@@ -44,7 +44,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: radial-gradient(circle at 75% 30%, rgba(0, 173, 181, 0.15) 0%, transparent 50%);
+      background: radial-gradient(circle at 75% 30%, rgba(37,99,235,0.08) 0%, transparent 50%);
       z-index: 0;
     }
 
@@ -80,12 +80,12 @@
       justify-content: center;
       gap: 1.5rem;
       padding: 1.2rem;
-      background-color: rgba(26, 26, 26, 0.95);
+      background-color: #fff;
       backdrop-filter: blur(5px);
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 10px rgba(100, 116, 139, 0.07);
     }
 
     nav a {
@@ -120,6 +120,8 @@
       max-width: 900px;
       margin: 3rem auto;
       padding: 0 1.5rem;
+      background: none;
+      animation: fadeIn 0.6s ease forwards;
     }
 
     section h2 {
@@ -141,23 +143,23 @@
       border-radius: 3px;
     }
 
-    .project, .experience {
+    .project, .experience, .skill-category {
       background-color: var(--card-bg);
       border-radius: 8px;
       padding: 1.5rem;
       margin-bottom: 2rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 8px rgba(100, 116, 139, 0.06);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       border-left: 3px solid transparent;
     }
 
     .project:hover, .experience:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 6px 12px rgba(100, 116, 139, 0.10);
       border-left-color: var(--accent-color);
     }
 
-    .project h3, .experience h3 {
+    .project h3, .experience h3, .skill-category h3 {
       color: var(--secondary-color);
       margin-top: 0;
       font-size: 1.4rem;
@@ -172,7 +174,7 @@
     }
 
     .project-meta span {
-      background-color: rgba(0, 173, 181, 0.2);
+      background-color: #e0e7ef;
       padding: 0.3rem 0.8rem;
       border-radius: 20px;
       color: var(--accent-color);
@@ -186,34 +188,35 @@
       display: inline-block;
       margin-right: 1rem;
       padding: 0.5rem 1rem;
-      background-color: rgba(0, 173, 181, 0.1);
+      background-color: #f1f5f9;
       border: 1px solid var(--accent-color);
       border-radius: 4px;
+      color: var(--accent-color);
       transition: all 0.3s ease;
     }
 
     .project-links a:hover {
       background-color: var(--accent-color);
-      color: #121212;
+      color: #fff;
       text-decoration: none;
     }
 
     .quote {
       font-style: italic;
-      color: #aaa;
-      border-left: 3px solid var(--secondary-color);
+      color: var(--secondary-color);
+      border-left: 3px solid var(--accent-color);
       padding: 1rem 1.5rem;
       margin: 2rem 0;
-      background-color: rgba(30, 30, 30, 0.7);
+      background-color: #f1f5f9;
       border-radius: 0 8px 8px 0;
     }
 
     footer {
       text-align: center;
       padding: 3rem 1rem;
-      background-color: #1a1a1a;
+      background-color: #e9ecef;
       font-size: 0.9rem;
-      color: #888;
+      color: #64748b;
     }
 
     a {
@@ -241,15 +244,15 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.1);
-      color: var(--text-color);
+      background-color: #f1f5f9;
+      color: var(--accent-color);
       font-size: 1.2rem;
       transition: all 0.3s ease;
     }
 
     .social-icons a:hover {
       background-color: var(--accent-color);
-      color: #121212;
+      color: #fff;
       transform: translateY(-3px);
       text-decoration: none;
     }
@@ -259,7 +262,7 @@
       bottom: 30px;
       right: 30px;
       background-color: var(--accent-color);
-      color: #121212;
+      color: #fff;
       border: none;
       width: 50px;
       height: 50px;
@@ -267,7 +270,7 @@
       cursor: pointer;
       display: none;
       font-size: 1.2rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 10px rgba(100, 116, 139, 0.13);
       transition: all 0.3s ease;
       z-index: 99;
     }
@@ -287,13 +290,13 @@
       background-color: var(--card-bg);
       border-radius: 8px;
       padding: 1.5rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 8px rgba(100, 116, 139, 0.06);
     }
 
     .skill-category h3 {
       color: var(--secondary-color);
       margin-top: 0;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid #e0e7ef;
       padding-bottom: 0.5rem;
     }
 
@@ -313,38 +316,46 @@
       color: var(--accent-color);
     }
 
+    /* About section photo and text side by side */
     .about-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      align-items: flex-start;
       gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .about-photo {
+      flex-shrink: 0;
+    }
+
+    .about-photo img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(100,116,139,0.13);
+      display: block;
+      background: #e0e7ef;
     }
 
     .about-text {
-      order: 1;
+      min-width: 260px;
+      max-width: 600px;
     }
 
-    .about-image {
-      order: 2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .about-image img {
-      max-width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    @media (max-width: 900px) {
+      section {
+        margin: 2rem auto;
+      }
     }
 
     @media (max-width: 768px) {
       .about-content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
       }
-      .about-text {
-        order: 2;
-      }
-      .about-image {
-        order: 1;
+      .about-photo {
+        margin-bottom: 1.5rem;
       }
       header h1 {
         font-size: 2.2rem;
@@ -374,6 +385,10 @@
         margin-bottom: 0.5rem;
         text-align: center;
       }
+      .about-photo img {
+        width: 140px;
+        height: 140px;
+      }
     }
 
     /* Animation */
@@ -383,14 +398,10 @@
     }
 
     section {
-      animation: fadeIn 0.6s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
-
-    section:nth-child(2) { animation-delay: 0.1s; }
-    section:nth-child(3) { animation-delay: 0.2s; }
-    section:nth-child(4) { animation-delay: 0.3s; }
-    section:nth-child(5) { animation-delay: 0.4s; }
-    section:nth-child(6) { animation-delay: 0.5s; }
   </style>
 </head>
 <body>
@@ -417,8 +428,10 @@
 <section id="about">
   <h2>About Me</h2>
   <div class="about-content">
-    <div class="about-text" style="overflow:auto;">
-      <img src="harry.jpg" alt="Harry Guajan" style="float:right; margin: 0 0 1.5rem 2rem; width: 260px; max-width:40vw; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.2);" />
+    <div class="about-photo">
+      <img src="harry.jpg" alt="Harry Guajan" />
+    </div>
+    <div class="about-text">
       <p><strong>Harry Guajan</strong></p>
       <p>
         I am Harry Nicolás Guajan Simbana, a Computer Engineering student at the National Polytechnic School of Ecuador (EPN), currently in my fourth semester. My academic journey has equipped me with a solid foundation in programming, database systems, and modern development tools, and has sparked a deep curiosity for emerging technologies.
@@ -683,9 +696,6 @@
     }, observerOptions);
 
     document.querySelectorAll('section').forEach(section => {
-      section.style.opacity = 0;
-      section.style.transform = 'translateY(20px)';
-      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
       observer.observe(section);
     });
   </script>
