@@ -645,44 +645,115 @@ I’m focused on developing both my technical and personal skills every day.</p>
             </ul>
         </div>
     </div>
+    
 </section>
 
     <!-- Skills Section -->
-    <section id="skills">
-        <h2 class="section-title">Technical <span>Skills</span></h2>
-        <div class="skills-grid">
+<section id="skills">
+    <h2 class="section-title">Technical <span>Skills</span></h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 2.5rem; justify-content: center;">
+        <!-- Top 5 skills horizontal -->
+        <div style="display: flex; flex-direction: row; gap: 2rem; flex: 1 1 0; justify-content: center; min-width: 320px; max-width: 900px;">
             <div class="skill-item">
-                <div class="skill-icon"><i class="fab fa-python"></i></div>
-                <h3>Python</h3>
-                <p>Scripting, Automation, Data Science</p>
-            </div>
-            <div class="skill-item">
-                <div class="skill-icon"><i class="fab fa-js"></i></div>
-                <h3>JavaScript</h3>
-                <p>Frontend Development, React</p>
-            </div>
-            <div class="skill-item">
-                <div class="skill-icon"><i class="fas fa-database"></i></div>
-                <h3>SQL</h3>
-                <p>Database Design, Optimization</p>
+                <div class="skill-icon"><i class="fas fa-code"></i></div>
+                <h3>Java</h3>
+                <p>Basic–Intermediate<br>Object-Oriented Programming</p>
+                <div class="skill-stars">★★★☆☆</div>
             </div>
             <div class="skill-item">
                 <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
-                <h3>Git</h3>
-                <p>Version Control, Collaboration</p>
+                <h3>Git & GitHub</h3>
+                <p>Version control<br>and collaboration</p>
+                <div class="skill-stars">★★★★☆</div>
             </div>
             <div class="skill-item">
-                <div class="skill-icon"><i class="fab fa-aws"></i></div>
-                <h3>AWS</h3>
-                <p>Cloud Services, Deployment</p>
+                <div class="skill-icon"><i class="fab fa-wordpress"></i></div>
+                <h3>WordPress</h3>
+                <p>Website creation and content management<br>(course certified)</p>
+                <div class="skill-stars">★★★★☆</div>
             </div>
             <div class="skill-item">
-                <div class="skill-icon"><i class="fas fa-robot"></i></div>
-                <h3>Machine Learning</h3>
-                <p>TensorFlow, Scikit-learn</p>
+                <div class="skill-icon"><i class="fab fa-python"></i></div>
+                <h3>Python</h3>
+                <p>Currently learning<br>Scripting and prototyping</p>
+                <div class="skill-stars">★★☆☆☆</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <h3>MySQL</h3>
+                <p>Relational database design<br>and queries</p>
+                <div class="skill-stars">★★★☆☆</div>
             </div>
         </div>
-    </section>
+    </div>
+    <!-- Subsection: Other skills -->
+    <div style="max-width: 500px; margin: 2.5rem auto 0 auto;">
+        <h3 style="margin-bottom: 1.2rem; text-align:left; color:var(--primary); font-size:1.3rem;">Other Skills</h3>
+        <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 1.2rem;">
+                <strong><i class="fas fa-code-branch"></i> VS Code</strong>
+                <span class="skill-stars">★★★★☆</span>
+                <br><small>Main development environment</small>
+            </li>
+            <li style="margin-bottom: 1.2rem;">
+                <strong><i class="fas fa-paint-brush"></i> Adobe Photoshop</strong>
+                <span class="skill-stars">★★★☆☆</span>
+                <br><small>Intermediate – Image editing and asset creation</small>
+            </li>
+            <li style="margin-bottom: 1.2rem;">
+                <strong><i class="fas fa-video"></i> Video Editing</strong>
+                <span class="skill-stars">★★★☆☆</span>
+                <br><small>Intermediate – Basic post-production and storytelling</small>
+            </li>
+            <li style="margin-bottom: 1.2rem;">
+                <strong><i class="fas fa-language"></i> English</strong>
+                <span class="skill-stars">★★★☆☆</span>
+                <br><small>Advanced Two (B1 in progress)</small>
+            </li>
+            <li>
+                <strong><i class="fas fa-language"></i> Spanish</strong>
+                <span class="skill-stars">★★★★★</span>
+                <br><small>Native speaker</small>
+            </li>
+        </ul>
+    </div>
+    <style>
+        .skill-stars {
+            margin-left: 0.5rem;
+            color: var(--primary);
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            vertical-align: middle;
+        }
+        .skill-item {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            margin-bottom: 1.2rem;
+            min-width: 180px;
+            max-width: 200px;
+            flex: 1 1 0;
+        }
+        .skill-icon {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+
+            @media (max-width: 900px) {
+            #skills > div,
+            #skills > div > div {
+                flex-direction: column !important;
+                align-items: center;
+                max-width: 100% !important;
+            }
+            .skill-item {
+                max-width: 100%;
+            }
+        }
+    </style>
+</section>
+
 
     <!-- Projects Section -->
     <section id="projects">
