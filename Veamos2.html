@@ -528,27 +528,103 @@ I’m focused on developing both my technical and personal skills every day.</p>
 </section>
 
 
-    <!-- Certifications Section -->
-    <section id="certifications">
-        <h2 class="section-title">My <span>Certifications</span></h2>
-        <div class="certs-container">
-            <div class="cert-card">
-                <h3>Full Stack Web Development</h3>
-                <span class="date">2023 | Code Academy</span>
-                <p>Completed intensive 400-hour program covering React, Node.js, MongoDB, and RESTful API design.</p>
+<!-- Certifications Section -->
+
+<!-- Certifications Section -->
+<section id="certifications">
+    <h2 class="section-title">My <span>Certifications</span></h2>
+    <div class="certs-scroll" style="overflow-x: auto; padding-bottom: 1rem;">
+        <div class="certs-flex" style="display: flex; gap: 2rem; min-width: 100%;">
+            <!-- Main 3 certifications as cards -->
+            <div class="cert-card" style="min-width: 340px; max-width: 370px;">
+                <h3>English Language Proficiency – B1</h3>
+                <span class="date">EPN | In Progress</span>
+                <p>Final level (Advanced Two). Academic English aligned with CEFR. Expected: 2025.</p>
+                <a href="ruta-certificado-ingles.pdf" target="_blank" class="btn btn-outline" style="margin-top: 0.8rem;">View PDF</a>
             </div>
-            <div class="cert-card">
-                <h3>AWS Certified Cloud Practitioner</h3>
-                <span class="date">2022 | Amazon Web Services</span>
-                <p>Demonstrated foundational understanding of AWS cloud services and architecture.</p>
+            <div class="cert-card" style="min-width: 340px; max-width: 370px;">
+                <h3>Cisco – Python for Beginners</h3>
+                <span class="date">Cisco Networking Academy | 2024</span>
+                <p>Python basics: syntax, control structures, functions, data handling. Certificate earned.</p>
+                <a href="ruta-certificado-cisco.pdf" target="_blank" class="btn btn-outline" style="margin-top: 0.8rem;">View PDF</a>
             </div>
-            <div class="cert-card">
-                <h3>Machine Learning Specialization</h3>
-                <span class="date">2021 | Coursera</span>
-                <p>Completed 6-course series covering algorithms, neural networks, and TensorFlow implementation.</p>
+            <div class="cert-card" style="min-width: 340px; max-width: 370px;">
+                <h3>Complete WordPress Course</h3>
+                <span class="date">Udemy | 2025</span>
+                <p>Built websites: domain setup, theme, plugins, SEO. 100% completion validated.</p>
+                <a href="ruta-certificado-wordpress.pdf" target="_blank" class="btn btn-outline" style="margin-top: 0.8rem;">View PDF</a>
+            </div>
+            <!-- Hidden/extra certifications -->
+            <div id="more-certs" style="display: none;">
+                <div class="cert-card" style="min-width: 340px; max-width: 370px;">
+                    <h3>Extra Certification Example</h3>
+                    <span class="date">Institution | Year</span>
+                    <p>Short description of the extra certification.</p>
+                    <a href="ruta-certificado-extra.pdf" target="_blank" class="btn btn-outline" style="margin-top: 0.8rem;">View PDF</a>
+                </div>
+                <!-- Agrega más aquí -->
             </div>
         </div>
-    </section>
+    </div>
+    <div style="text-align:center; margin-top:1.5rem;">
+        <button id="showMoreCerts" class="btn btn-outline">
+            Show More
+        </button>
+        <button id="showLessCerts" class="btn btn-outline" style="display:none;">
+            Show Less
+        </button>
+    </div>
+    <style>
+        /* Scrollbar bonita y oscura para la sección de certificados */
+        .certs-scroll {
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) var(--card-bg);
+        }
+        .certs-scroll::-webkit-scrollbar {
+            height: 10px;
+            background: var(--card-bg);
+            border-radius: 6px;
+        }
+        .certs-scroll::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 6px;
+        }
+        .certs-flex {
+            display: flex;
+            gap: 2rem;
+        }
+        #more-certs {
+            display: none;
+            gap: 2rem;
+        }
+        @media (max-width: 900px) {
+            .certs-flex {
+                gap: 1rem;
+            }
+        }
+    </style>
+    <script>
+        // Mostrar más/menos certificados al hacer clic
+        document.addEventListener('DOMContentLoaded', function() {
+            var btnMore = document.getElementById('showMoreCerts');
+            var btnLess = document.getElementById('showLessCerts');
+            var more = document.getElementById('more-certs');
+            if(btnMore && btnLess && more) {
+                btnMore.onclick = function() {
+                    more.style.display = 'flex';
+                    btnMore.style.display = 'none';
+                    btnLess.style.display = 'inline-block';
+                };
+                btnLess.onclick = function() {
+                    more.style.display = 'none';
+                    btnMore.style.display = 'inline-block';
+                    btnLess.style.display = 'none';
+                };
+            }
+        });
+    </script>
+</section>
+
 
     <!-- Experience Section -->
     <section id="experience">
