@@ -831,31 +831,99 @@ I’m focused on developing both my technical and personal skills every day.</p>
 </section>
 
     <!-- Achievements Section -->
-    <section id="achievements">
-        <h2 class="section-title">Personal <span>Achievements</span></h2>
-        <div class="achieve-container">
-            <div class="achieve-card">
-                <div class="achieve-icon"><i class="fas fa-medal"></i></div>
-                <h3>Marathon Runner</h3>
-                <p>Completed multiple half-marathons and currently training for full marathon.</p>
+<!-- Achievements Section -->
+<section id="achievements">
+    <h2 class="section-title">Personal <span>Achievements</span></h2>
+    <div class="achieve-container">
+        <div class="achieve-card">
+            <div class="achieve-slider">
+                <img src="https://via.placeholder.com/220x150?text=PUMABOT" alt="PUMABOT 2025" class="achieve-img active">
+                <img src="https://via.placeholder.com/220x150?text=Equipo+Robotica" alt="Robotics Team" class="achieve-img">
+                <button class="achieve-prev" onclick="moveAchieveSlide(-1, this)">&#10094;</button>
+                <button class="achieve-next" onclick="moveAchieveSlide(1, this)">&#10095;</button>
             </div>
-            <div class="achieve-card">
-                <div class="achieve-icon"><i class="fas fa-language"></i></div>
-                <h3>Multilingual</h3>
-                <p>Fluent in English and Spanish, currently learning Japanese (N4 level).</p>
-            </div>
-            <div class="achieve-card">
-                <div class="achieve-icon"><i class="fas fa-chess"></i></div>
-                <h3>Chess Player</h3>
-                <p>Regional chess champion with Elo rating of 1800+ in online platforms.</p>
-            </div>
-            <div class="achieve-card">
-                <div class="achieve-icon"><i class="fas fa-music"></i></div>
-                <h3>Guitarist</h3>
-                <p>Self-taught guitarist with 5+ years experience and original compositions.</p>
-            </div>
+            <h3>Represented EPN at PUMABOT 2025</h3>
+            <p>
+                Participated in Ecuador’s national robotics competition, contributing as part of the university team. Gained experience in teamwork, technical preparation, and competitive problem-solving.
+            </p>
         </div>
-    </section>
+        <div class="achieve-card">
+            <div class="achieve-slider">
+                <img src="https://via.placeholder.com/220x150?text=Tutor+EPN" alt="Digital Literacy Tutor" class="achieve-img active">
+                <img src="https://via.placeholder.com/220x150?text=Clase+Digital" alt="Digital Class" class="achieve-img">
+                <button class="achieve-prev" onclick="moveAchieveSlide(-1, this)">&#10094;</button>
+                <button class="achieve-next" onclick="moveAchieveSlide(1, this)">&#10095;</button>
+            </div>
+            <h3>Digital Literacy Tutor (EPN)</h3>
+            <p>
+                Selected to participate in EPN's digital inclusion initiative. Taught over 40 hours of digital skills to non-technical users, developing customized teaching approaches and improving social impact.
+            </p>
+        </div>
+        <div class="achieve-card">
+            <div class="achieve-slider">
+                <img src="https://via.placeholder.com/220x150?text=Soccer+Tournament" alt="Soccer Tournament" class="achieve-img active">
+                <img src="https://via.placeholder.com/220x150?text=Team+Photo" alt="Team Photo" class="achieve-img">
+                <button class="achieve-prev" onclick="moveAchieveSlide(-1, this)">&#10094;</button>
+                <button class="achieve-next" onclick="moveAchieveSlide(1, this)">&#10095;</button>
+            </div>
+            <h3>Interfaculty Soccer Tournament Participant</h3>
+            <p>
+                Represented the Faculty of FIS in the university’s interfaculty soccer tournament. Developed teamwork, discipline, and leadership skills while competing in a dynamic sports environment.
+            </p>
+        </div>
+    </div>
+    <style>
+        .achieve-slider {
+            position: relative;
+            width: 220px;
+            height: 150px;
+            margin: 0 auto 1.2rem auto;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #222;
+        }
+        .achieve-img {
+            display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            position: absolute;
+            left: 0; top: 0;
+        }
+        .achieve-img.active {
+            display: block;
+            position: relative;
+        }
+        .achieve-prev, .achieve-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            z-index: 2;
+        }
+        .achieve-prev { left: 8px; }
+        .achieve-next { right: 8px; }
+    </style>
+    <script>
+        // Simple slider for each achievement card
+        function moveAchieveSlide(n, btn) {
+            const slider = btn.parentElement;
+            const imgs = slider.querySelectorAll('.achieve-img');
+            let current = Array.from(imgs).findIndex(img => img.classList.contains('active'));
+            imgs[current].classList.remove('active');
+            let next = (current + n + imgs.length) % imgs.length;
+            imgs[next].classList.add('active');
+        }
+    </script>
+</section> 
 
     <!-- Contact Section -->
     <section id="contact">
