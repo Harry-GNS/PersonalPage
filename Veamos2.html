@@ -756,41 +756,79 @@ I’m focused on developing both my technical and personal skills every day.</p>
 
 
     <!-- Projects Section -->
-    <section id="projects">
-        <h2 class="section-title">Featured <span>Projects</span></h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-img">Project Preview</div>
-                <div class="project-info">
-                    <h3>School Management System</h3>
-                    <p>Full-stack web application for educational institutions with student, teacher, and grade management.</p>
-                    <div class="project-links">
-                        <a href="#" class="btn">View Code</a>
-                    </div>
-                </div>
+<!-- Projects Section -->
+<section id="projects">
+    <h2 class="section-title">Featured <span>Projects</span></h2>
+    <div class="projects-list-flex">
+        <!-- Proyecto 1 -->
+        <div class="project-flex-card">
+            <div class="project-flex-img">
+                <img src="https://via.placeholder.com/220x220?text=OLITUTI" alt="OLITUTI Project Screenshot" style="width:220px; height:220px; object-fit:cover; border-radius:10px;">
             </div>
-            <div class="project-card">
-                <div class="project-img">Project Preview</div>
-                <div class="project-info">
-                    <h3>AI Chatbot</h3>
-                    <p>Natural language processing chatbot using Python and transformer models for customer support.</p>
-                    <div class="project-links">
-                        <a href="#" class="btn">View Code</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-img">Project Preview</div>
-                <div class="project-info">
-                    <h3>Weather Dashboard</h3>
-                    <p>Mobile weather application with real-time forecasts using public weather APIs.</p>
-                    <div class="project-links">
-                        <a href="#" class="btn">View Code</a>
-                    </div>
+            <div class="project-flex-info">
+                <h3>OLITUTI – Store Management System</h3>
+                <p>
+                    <strong>Technologies:</strong> Java, MySQL, Java Swing<br>
+                    <strong>Role:</strong> Backend & UI Developer
+                </p>
+                <p>
+                    Developed a desktop application for managing product inventory, clients, and invoices. Implemented object-oriented design, database connectivity, PDF invoice generation, and UI/UX improvements.
+                </p>
+                <div class="project-links">
+                    <a href="ruta-olituti-pdf.pdf" class="btn btn-outline" target="_blank">View PDF</a>
+                    <a href="https://github.com/tuusuario/olituti" class="btn" target="_blank">View Code</a>
                 </div>
             </div>
         </div>
-    </section>
+        <!-- Proyecto 2 -->
+        <div class="project-flex-card">
+            <div class="project-flex-img">
+                <img src="https://via.placeholder.com/220x220?text=Pomopet" alt="Pomopet Project Mockup" style="width:220px; height:220px; object-fit:cover; border-radius:10px;">
+            </div>
+            <div class="project-flex-info">
+                <h3>Pomopet – Gamified Productivity App (Concept Stage)</h3>
+                <p>
+                    <strong>Technologies (planned):</strong> Python, Flask/Django
+                </p>
+                <p>
+                    A personal project in early development that applies gamification principles to daily productivity. Focused on user motivation, habit tracking, and behavioral design.
+                </p>
+            </div>
+        </div>
+    </div>
+    <style>
+        .projects-list-flex {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+        .project-flex-card {
+            display: flex;
+            gap: 2.5rem;
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            align-items: center;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+        }
+        .project-flex-img {
+            flex-shrink: 0;
+        }
+        .project-flex-info {
+            flex: 1;
+        }
+        @media (max-width: 900px) {
+            .project-flex-card {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+            .project-flex-img {
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+</section>
 
     <!-- Achievements Section -->
     <section id="achievements">
