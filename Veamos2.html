@@ -590,9 +590,14 @@ I’m focused on developing both my technical and personal skills every day.</p>
         .certs-flex {
             display: flex;
             gap: 2rem;
+            align-items: stretch; /* Asegura igual altura */
         }
         #more-certs {
             display: none;
+            gap: 2rem;
+        }
+        #more-certs.flex-visible {
+            display: flex !important;
             gap: 2rem;
         }
         @media (max-width: 900px) {
@@ -602,19 +607,18 @@ I’m focused on developing both my technical and personal skills every day.</p>
         }
     </style>
     <script>
-        // Mostrar más/menos certificados al hacer clic
         document.addEventListener('DOMContentLoaded', function() {
             var btnMore = document.getElementById('showMoreCerts');
             var btnLess = document.getElementById('showLessCerts');
             var more = document.getElementById('more-certs');
             if(btnMore && btnLess && more) {
                 btnMore.onclick = function() {
-                    more.style.display = 'flex';
+                    more.classList.add('flex-visible');
                     btnMore.style.display = 'none';
                     btnLess.style.display = 'inline-block';
                 };
                 btnLess.onclick = function() {
-                    more.style.display = 'none';
+                    more.classList.remove('flex-visible');
                     btnMore.style.display = 'inline-block';
                     btnLess.style.display = 'none';
                 };
