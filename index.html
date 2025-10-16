@@ -537,25 +537,22 @@ I’m focused on developing both my technical and personal skills every day.</p>
         <div class="certs-flex" style="display: flex; gap: 2rem; min-width: 100%;">
             <!-- Main 3 certifications as cards -->
             <div class="cert-card" style="min-width: 340px; max-width: 370px;">
-                <h3>English Language Proficiency – B1</h3>
-                <span class="date">EPN | In Progress</span>
-                <p>Final level (Advanced Two). Academic English aligned with CEFR. Expected: 2025.</p>
-                <!-- No PDF button for English -->
+                <h3>English Certificate – CEC EPN</h3>
+                <span class="date">Continuing Education Center | 2023</span>
+                <p>
+                    Successfully completed Intermediate Two (80 hours) at the Continuing Education Center.
+                </p>
+                <a href="https://aps.cec-epn.edu.ec/diplomas/2023/LINGUISTICA/5/diploma_250012_54481-signed.pdf" target="_blank" class="btn btn-outline" style="margin-top: 0.8rem;">View</a>
             </div>
             <div class="cert-card" style="min-width: 340px; max-width: 370px;">
                 <h3>Cisco – Python for Beginners</h3>
                 <span class="date">Cisco Networking Academy | 2024</span>
                 <p>Python basics: syntax, control structures, functions, data handling. Certificate earned.</p>
-                <a href="Files/Diploma_Inclusion.pdf" target="_blank" class="btn btn-outline" style="margin-top: 0.8rem;">View PDF</a>
+                <a href="Files/python new.pdf" target="_blank" class="btn btn-outline" style="margin-top: 0.8rem;">View PDF</a>
             </div>
-            <div class="cert-card" style="min-width: 340px; max-width: 370px;">
-                <h3>Complete WordPress Course</h3>
-                <span class="date">Udemy | 2025</span>
-                <p>Built websites: domain setup, theme, plugins, SEO. 100% completion validated.</p>
-                <a href="Files/Diploma_wordpress.pdf" target="_blank" class="btn btn-outline" style="margin-top: 0.8rem;">View PDF</a>
-            </div>
-            <!-- Hidden/extra certifications -->
-            <div id="more-certs" style="display: none;">
+            
+            <!-- Extra certifications (always visible) -->
+            <div id="more-certs" class="flex-visible">
                 <div class="cert-card" style="min-width: 340px; max-width: 370px;">
                     <h3>More certifications coming soon</h3>
                     <span class="date">Stay tuned!</span>
@@ -564,14 +561,7 @@ I’m focused on developing both my technical and personal skills every day.</p>
             </div>
         </div>
     </div>
-    <div style="text-align:center; margin-top:1.5rem;">
-        <button id="showMoreCerts" class="btn btn-outline">
-            Show More
-        </button>
-        <button id="showLessCerts" class="btn btn-outline" style="display:none;">
-            Show Less
-        </button>
-    </div>
+    
     <style>
         /* Scrollbar bonita y oscura para la sección de certificados */
         .certs-scroll {
@@ -593,11 +583,7 @@ I’m focused on developing both my technical and personal skills every day.</p>
             align-items: stretch; /* Asegura igual altura */
         }
         #more-certs {
-            display: none;
-            gap: 2rem;
-        }
-        #more-certs.flex-visible {
-            display: flex !important;
+            display: flex;
             gap: 2rem;
         }
         @media (max-width: 900px) {
@@ -606,25 +592,7 @@ I’m focused on developing both my technical and personal skills every day.</p>
             }
         }
     </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var btnMore = document.getElementById('showMoreCerts');
-            var btnLess = document.getElementById('showLessCerts');
-            var more = document.getElementById('more-certs');
-            if(btnMore && btnLess && more) {
-                btnMore.onclick = function() {
-                    more.classList.add('flex-visible');
-                    btnMore.style.display = 'none';
-                    btnLess.style.display = 'inline-block';
-                };
-                btnLess.onclick = function() {
-                    more.classList.remove('flex-visible');
-                    btnMore.style.display = 'inline-block';
-                    btnLess.style.display = 'none';
-                };
-            }
-        });
-    </script>
+    
 </section>
 
 
@@ -668,12 +636,7 @@ I’m focused on developing both my technical and personal skills every day.</p>
                 <p>Version control<br>and collaboration</p>
                 <div class="skill-stars">★★⯨☆☆</div>
             </div>
-            <div class="skill-item">
-                <div class="skill-icon"><i class="fab fa-wordpress"></i></div>
-                <h3>WordPress</h3>
-                <p>Website creation and content management<br>(course certified)</p>
-                <div class="skill-stars">★★⯨☆☆</div>
-            </div>
+            
             <div class="skill-item">
                 <div class="skill-icon"><i class="fab fa-python"></i></div>
                 <h3>Python</h3>
@@ -782,19 +745,19 @@ I’m focused on developing both my technical and personal skills every day.</p>
                 </div>
             </div>
         </div>
-        <!-- Proyecto 2 -->
+        <!-- Proyecto 2 (actualizado) -->
         <div class="project-flex-card">
             <div class="project-flex-img">
-                <img src="Media/Pomopet.jpg" alt="Pomopet Project Mockup" style="width:220px; height:220px; object-fit:cover; border-radius:10px;">
+                <img src="Media/Python.png" alt="Generación de Mapa 3D de Ecuador" style="width:220px; height:220px; object-fit:cover; border-radius:10px;">
             </div>
             <div class="project-flex-info">
-                <h3>Pomopet – Gamified Productivity App (Concept Stage)</h3>
+                <h3>Generación de Mapa 3D de Ecuador</h3>
                 <p>
-                    <strong>Technologies (planned):</strong> Python, Flask/Django
+                    Proyecto simple para generar y visualizar un mapa 3D del Ecuador a partir de datos disponibles.
                 </p>
-                <p>
-                    A personal project in early development that applies gamification principles to daily productivity. Focused on user motivation, habit tracking, and behavioral design.
-                </p>
+                <div class="project-links">
+                    <a href="https://github.com/Harry-GNS/Generacion-Mapa-3D-ECUADOR" class="btn" target="_blank">View Code</a>
+                </div>
             </div>
         </div>
     </div>
@@ -945,7 +908,7 @@ I’m focused on developing both my technical and personal skills every day.</p>
             <button type="submit" class="btn">Send Message</button>
         </form>
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/harry-gg-a8305a361/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/in/harry-nicolas-guajan-simba%C3%B1a-a8305a361/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://github.com/Harry-GNS" target="_blank"><i class="fab fa-github"></i></a>
             <a href="mailto:harryguajan1@hotmail.com"><i class="fas fa-envelope"></i></a>
         </div>
