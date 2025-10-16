@@ -533,10 +533,10 @@ I’m focused on developing both my technical and personal skills every day.</p>
 <!-- Certifications Section -->
 <section id="certifications">
     <h2 class="section-title">My <span>Certifications</span></h2>
-    <div class="certs-scroll" style="overflow-x: auto; padding-bottom: 1rem;">
-        <div class="certs-flex" style="display: flex; gap: 2rem; min-width: 100%;">
+    <div class="certs-scroll" style="padding-bottom: 1rem;">
+        <div class="certs-flex" style="display: flex; gap: 2rem; width: 100%; flex-wrap: wrap; justify-content: center;">
             <!-- Main 3 certifications as cards -->
-            <div class="cert-card" style="min-width: 340px; max-width: 370px;">
+            <div class="cert-card">
                 <h3>English Certificate – CEC EPN</h3>
                 <span class="date">Continuing Education Center | 2023</span>
                 <p>
@@ -544,7 +544,7 @@ I’m focused on developing both my technical and personal skills every day.</p>
                 </p>
                 <a href="https://aps.cec-epn.edu.ec/diplomas/2023/LINGUISTICA/5/diploma_250012_54481-signed.pdf" target="_blank" class="btn btn-outline" style="margin-top: 0.8rem;">View</a>
             </div>
-            <div class="cert-card" style="min-width: 340px; max-width: 370px;">
+            <div class="cert-card">
                 <h3>Cisco – Python for Beginners</h3>
                 <span class="date">Cisco Networking Academy | 2024</span>
                 <p>Python basics: syntax, control structures, functions, data handling. Certificate earned.</p>
@@ -553,7 +553,7 @@ I’m focused on developing both my technical and personal skills every day.</p>
             
             <!-- Extra certifications (always visible) -->
             <div id="more-certs" class="flex-visible">
-                <div class="cert-card" style="min-width: 340px; max-width: 370px;">
+                <div class="cert-card">
                     <h3>More certifications coming soon</h3>
                     <span class="date">Stay tuned!</span>
                     <p>New achievements and credentials will be added here as I continue my learning journey.</p>
@@ -581,6 +581,14 @@ I’m focused on developing both my technical and personal skills every day.</p>
             display: flex;
             gap: 2rem;
             align-items: stretch; /* Asegura igual altura */
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        /* Responsive sizing for certification cards */
+        #certifications .cert-card {
+            min-width: 260px;
+            max-width: 360px;
+            flex: 1 1 300px;
         }
         #more-certs {
             display: flex;
@@ -589,6 +597,10 @@ I’m focused on developing both my technical and personal skills every day.</p>
         @media (max-width: 900px) {
             .certs-flex {
                 gap: 1rem;
+            }
+            #certifications .cert-card {
+                flex: 1 1 100%;
+                max-width: 100%;
             }
         }
     </style>
@@ -704,8 +716,8 @@ I’m focused on developing both my technical and personal skills every day.</p>
             font-size: 2.2rem;
             color: var(--primary);
             margin-bottom: 0.8rem;
-
-            @media (max-width: 900px) {
+        }
+        @media (max-width: 900px) {
             #skills > div,
             #skills > div > div {
                 flex-direction: column !important;
